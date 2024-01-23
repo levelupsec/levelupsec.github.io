@@ -1,12 +1,11 @@
 const comp_survey = new Survey.Model(company_json);
 comp_survey.applyTheme(themeJson);
 comp_survey.onComplete.add((sender, options) => {
-    console.log(JSON.stringify(sender.data, null, 3));
 
     $.ajax({
         type:"POST",
-        url: "https://hooks.zapier.com/hooks/catch/17683440/3ggf528/",
-        data: JSON.stringify(sender.data, null, 3),
+        url: "https://script.google.com/macros/s/AKfycbzwNFDrp7DDLCFrO2pxpujv4HDmpJB3IYABLO1ZSg4gUWN8aOZoVZDCeMJU2Fvmu7IajQ/exec",
+        data: JSON.stringify(sender.data),
         success: function(data)
         {
           console.log("Submitted!");

@@ -6,26 +6,26 @@ const company_json = {
       "elements": [
        {
         "type": "text",
-        "name": "question1",
+        "name": "name",
         "title": "Name",
         "isRequired": true
        },
        {
         "type": "text",
-        "name": "question2",
+        "name": "email",
         "title": "Email",
         "isRequired": true,
         "inputType": "email"
        },
        {
         "type": "text",
-        "name": "question3",
+        "name": "company",
         "title": "Company",
         "isRequired": true
        },
        {
         "type": "text",
-        "name": "question4",
+        "name": "desired_skills",
         "title": "Skills you're looking for",
         "isRequired": true
        }
