@@ -42,35 +42,6 @@ a.anchor {
   padding: 5px;
 }
 
-.tier-0 {
-  margin: 5px 10%;
-  background-color: #147db2;
-}
-
-.tier-1 {
-  margin: 5px 15%;
-  background-color: #0d85c0;
-}
-
-.tier-2 {
-  margin: 5px 20%;
-  background-color: #068dce;
-}
-
-.tier-3 {
-  margin: 5px 22%;
-  background-color: #009cea;
-}
-
-.tier-4 {
-  margin: 5px 30%;
-}
-
-.tier-5 {
-  margin: 5px 35%;
-}
-
-
 h1,
 h2,
 h3,

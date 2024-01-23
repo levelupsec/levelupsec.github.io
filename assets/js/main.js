@@ -16,7 +16,9 @@
     if (all) {
       return [...document.querySelectorAll(el)]
     } else {
-      return document.querySelector(el)
+      if (el != ''){
+        return document.querySelector(el)
+      }
     }
   }
 
@@ -45,9 +47,10 @@
    * Scrolls to an element with header offset
    */
   const scrollto = (el) => {
+    // el = hashlink target
     let header = select('#header')
-    let offset = header.offsetHeight
-
+    let offset = header.offsetHeight // size of header
+    
     let elementPos = select(el).offsetTop
     window.scrollTo({
       top: elementPos - offset,
@@ -111,7 +114,7 @@
    */
   on('click', '.scrollto', function(e) {
     if (select(this.hash)) {
-      e.preventDefault()
+      //e.preventDefault()
 
       let navbar = select('#navbar')
       if (navbar.classList.contains('navbar-mobile')) {
@@ -120,7 +123,10 @@
         navbarToggle.classList.toggle('bi-list')
         navbarToggle.classList.toggle('bi-x')
       }
-      scrollto(this.hash)
+      // The scrollto wasnt working correctly
+      // Used a.anchor with styling to account for header bar
+      // and turned off preventDefault to make hashlinks work
+      //scrollto(this.hash)
     }
   }, true)
 
