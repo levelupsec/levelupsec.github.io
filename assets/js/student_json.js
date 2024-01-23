@@ -45,7 +45,7 @@ const student_json = {
        },
        {
         "type": "text",
-        "name": "Additional Coding",
+        "name": "additional_coding",
         "title": "Any other additional coding experience you want to highlight? (Projects / Public git repo / etc)"
        }
       ]
@@ -102,14 +102,14 @@ const student_json = {
       "elements": [
        {
         "type": "text",
-        "name": "Start Date",
+        "name": "start_date",
         "title": "When are you looking to start training?",
         "isRequired": true,
         "inputType": "date"
        },
        {
         "type": "comment",
-        "name": "Extra Info",
+        "name": "extra_info",
         "title": "Anything else to add?"
        }
       ]
