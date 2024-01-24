@@ -633,6 +633,9 @@
         e.preventDefault();
 
         var form = $(this);
+        var successElm = $('<h4 class="thanks">');
+        successElm.html(`Thanks, we'll be in touch!`);
+        form.parent().replaceWith(successElm);
 
         $.ajax({
           type:"POST",
@@ -640,43 +643,13 @@
           data: form.serialize(),
           success: function(data)
           {
-            var successElm = $('<h4 class="thanks">');
-            successElm.html(`Thanks, we'll be in touch!`);
-
-            form.parent().replaceWith(successElm);
+            console.log("Success!")    
           }
         })
       })
     });
 
   </script>
-
-  <div><div class="sv-popup sv-popup--dropdown sv-popup--show-pointer sv-popup--left" tabindex="-1" data-bind="visible: isVisible, click: clickOutside, class: styleClass, event: { keydown: function(data, event) { onKeyDown(event); return true; } }" style="display: none;">
-    <div class="sv-popup__container" data-bind="style: { left: left, top: top, height: height, minWidth: minWidth, width: width }, click: function() { return true; }, clickBubble: false" style="left: 0px; top: 0px; height: auto; min-width: auto; width: auto;">
-      <div class="sv-popup__shadow">
-        <!-- ko if: $data.showHeader -->
-        <!-- ko template: { name: $data.popupHeaderTemplate, data: $data } -->
-    <span class="sv-popup__pointer" data-bind="style: { left: pointerTarget.left, top: pointerTarget.top }" style="left: 0px; top: 0px;"></span>
-  <!-- /ko -->
-        <!-- /ko -->
-        <div class="sv-popup__body-content">
-          <!-- ko if: !!title  --><!-- /ko -->
-          <div class="sv-popup__scrolling-content">
-            <div class="sv-popup__content" data-bind="component: { name: contentComponentName, params: contentComponentData }"><div data-bind="css: model.cssClasses.root" class="sv-list__container">
-    <!-- ko if: $data.model.showFilter --><!-- /ko -->
-    <div data-bind="css: model.cssClasses.emptyContainer, visible: $data.model.isEmpty" class="sv-list__empty-container">
-      <div data-bind="css: model.cssClasses.emptyText, text: model.emptyMessage, attr: { 'aria-label': model.emptyMessage }" class="sv-list__empty-text" aria-label="No data to display">No data to display</div>
-    </div>
-    <ul role="listbox" data-bind="css: model.cssClasses.itemsContainer, visible: !$data.model.isEmpty, event: { mousedown: function (data, e) { e.preventDefault(); }, keydown: function(data, e) { $data.model.onKeyDown(event); return true; }, mousemove: function(data, e) { $data.model.onMouseMove(event); return true; } }" class="sv-list" style="display: none;">
-      <!-- ko template: { foreach: model.renderedActions, afterRender: $data.afterItemRender } --><!-- /ko -->
-    </ul>
-  </div></div>
-          </div>
-          <!-- ko if: showFooter  --><!-- /ko -->
-        </div>
-      </div>
-    </div>
-  </div></div>  
 </body>
 
 </html>
