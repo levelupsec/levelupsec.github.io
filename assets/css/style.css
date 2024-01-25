@@ -20,7 +20,7 @@ a {
 }
 
 a:hover {
-  color: #aacd6b;
+  color: #009cea;
   text-decoration: none;
 }
 
@@ -2474,3 +2474,11 @@ section {
   font-size: 13px;
   color: #fff;
 }
+
+/*--------------------------------------------------------------
+# Consent buttons
+button {
+  color: #fff;
+  background-color: #009cea;
+}
+--------------------------------------------------------------*/

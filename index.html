@@ -32,6 +32,7 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
@@ -40,6 +41,28 @@
 </head>
 
 <body>
+  <!--Cookie Conset Banner Script-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+  <script>
+    window.addEventListener("load", function(){
+    console.log("loading")
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#000",
+          "text": "#009cea"
+        },
+        "button": {
+          "background": "#009cea"
+        }
+      },
+      "theme": "classic",
+      "content": {
+        "message": "This website uses Google Analytics cookies to track unique visits to this site.",
+        "href": "https://levelupsec.io/cookies.html"
+      }
+    })});
+    </script>  
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MWZWGS7G"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
