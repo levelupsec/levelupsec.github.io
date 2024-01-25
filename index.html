@@ -32,6 +32,7 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
@@ -40,6 +41,28 @@
 </head>
 
 <body>
+  <!--Cookie Consent Banner Script-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+  <script>
+    window.addEventListener("load", function(){
+    console.log("loading")
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#000",
+          "text": "#009cea"
+        },
+        "button": {
+          "background": "#009cea"
+        }
+      },
+      "theme": "classic",
+      "content": {
+        "message": "This website uses Google Analytics cookies to track unique visits to this site.",
+        "href": "https://levelupsec.io/cookies.html"
+      }
+    })});
+    </script>  
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MWZWGS7G"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -219,8 +242,8 @@
           <!--<p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>-->
         </div>
 
-        <div class="row">
-          <div class="col-md-4 offset-md-3 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="100">
+        <div class="row justify-content-center align-items-center">
+          <div class="justify-content-center col-md-6 col-md-offset-4 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box icon-box-blue">
               <div class="icon"><i class="bi bi-book-half"></i></div>
               <br>
@@ -231,7 +254,7 @@
             </div>
           </div>
           <!--
-          <div class="col-md-4 offset-md-3 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="100">
+          <div class="justify-content-center col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box icon-box-blue">
               <div class="icon"><i class="bi bi-book-half"></i></div>
               <br>
@@ -242,7 +265,7 @@
             </div>
           </div>
         -->
-          <div class="col-md-4 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="300">
+          <div class="justify-content-center col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box icon-box-blue">
               <div class="icon"><i class="bi bi-search"></i></div>
               <br>
@@ -633,6 +656,9 @@
         e.preventDefault();
 
         var form = $(this);
+        var successElm = $('<h4 class="thanks">');
+        successElm.html(`Thanks, we'll be in touch!`);
+        form.parent().replaceWith(successElm);
 
         $.ajax({
           type:"POST",
@@ -640,43 +666,13 @@
           data: form.serialize(),
           success: function(data)
           {
-            var successElm = $('<h4 class="thanks">');
-            successElm.html(`Thanks, we'll be in touch!`);
-
-            form.parent().replaceWith(successElm);
+            console.log("Success!")    
           }
         })
       })
     });
 
   </script>
-
-  <div><div class="sv-popup sv-popup--dropdown sv-popup--show-pointer sv-popup--left" tabindex="-1" data-bind="visible: isVisible, click: clickOutside, class: styleClass, event: { keydown: function(data, event) { onKeyDown(event); return true; } }" style="display: none;">
-    <div class="sv-popup__container" data-bind="style: { left: left, top: top, height: height, minWidth: minWidth, width: width }, click: function() { return true; }, clickBubble: false" style="left: 0px; top: 0px; height: auto; min-width: auto; width: auto;">
-      <div class="sv-popup__shadow">
-        <!-- ko if: $data.showHeader -->
-        <!-- ko template: { name: $data.popupHeaderTemplate, data: $data } -->
-    <span class="sv-popup__pointer" data-bind="style: { left: pointerTarget.left, top: pointerTarget.top }" style="left: 0px; top: 0px;"></span>
-  <!-- /ko -->
-        <!-- /ko -->
-        <div class="sv-popup__body-content">
-          <!-- ko if: !!title  --><!-- /ko -->
-          <div class="sv-popup__scrolling-content">
-            <div class="sv-popup__content" data-bind="component: { name: contentComponentName, params: contentComponentData }"><div data-bind="css: model.cssClasses.root" class="sv-list__container">
-    <!-- ko if: $data.model.showFilter --><!-- /ko -->
-    <div data-bind="css: model.cssClasses.emptyContainer, visible: $data.model.isEmpty" class="sv-list__empty-container">
-      <div data-bind="css: model.cssClasses.emptyText, text: model.emptyMessage, attr: { 'aria-label': model.emptyMessage }" class="sv-list__empty-text" aria-label="No data to display">No data to display</div>
-    </div>
-    <ul role="listbox" data-bind="css: model.cssClasses.itemsContainer, visible: !$data.model.isEmpty, event: { mousedown: function (data, e) { e.preventDefault(); }, keydown: function(data, e) { $data.model.onKeyDown(event); return true; }, mousemove: function(data, e) { $data.model.onMouseMove(event); return true; } }" class="sv-list" style="display: none;">
-      <!-- ko template: { foreach: model.renderedActions, afterRender: $data.afterItemRender } --><!-- /ko -->
-    </ul>
-  </div></div>
-          </div>
-          <!-- ko if: showFooter  --><!-- /ko -->
-        </div>
-      </div>
-    </div>
-  </div></div>  
 </body>
 
 </html>
