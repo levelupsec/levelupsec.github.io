@@ -110,8 +110,8 @@
   }, true)
 
   /**
-   * Scrool with ofset on links with a class name .scrollto
-   */
+   * Scroll with offset on links with a class name .scrollto
+ */
   on('click', '.scrollto', function(e) {
     if (select(this.hash)) {
       //e.preventDefault()
@@ -132,7 +132,7 @@
 
   /**
    * Scroll with ofset on page load with hash links in the url
-   */
+  */
   window.addEventListener('load', () => {
     if (window.location.hash) {
       if (select(window.location.hash)) {
@@ -140,6 +140,7 @@
       }
     }
   });
+ 
 
   /**
    * Initiate portfolio lightbox 
@@ -298,7 +299,7 @@
     loop: true,
     autoplay: {
       delay: 5000,
-      disableOnInteraction: false
+      disableOnInteraction: true
     },
     slidesPerView: 'auto',
     pagination: {
