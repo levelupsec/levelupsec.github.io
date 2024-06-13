@@ -6,6 +6,9 @@
 * License: https://bootstrapmade.com/license/
 */
 
+#more {display: none;}
+
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -1085,6 +1088,53 @@ section {
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #009cea;
+}
+
+.testimonials .btn-get-started {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 1px;
+  display: inline-block;
+  /*padding: 8px 28px;*/
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  /*border: 2px solid #009cea;*/
+  color: #009cea;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  margin: 0px 0px 5px 40px;
+}
+
+.testimonials .btn-get-started:hover {
+  background: #009cea;
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .dots {
+    display: inline;
+  }
+
+  .more {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .testimonials .btn-get-started {
+    display: none;
+  }
+
+  .dots {
+    display: none;
+  }
+
+  .more {
+    display: inline;
+  }
 }
 
 /*--------------------------------------------------------------
