@@ -496,6 +496,7 @@ section {
 
 .section-title {
   text-align: center;
+  padding-top: 10px;
   padding-bottom: 30px;
 }
 
@@ -2534,3 +2535,16 @@ button {
   background-color: #009cea;
 }
 --------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Classroom Demo Div Mobile
+--------------------------------------------------------------*/
+#demo-display {
+  display: none;
+}
+
+@media screen and (max-width: 859px) {
+  #demo-display {
+    display:inline;
+  }
+}
