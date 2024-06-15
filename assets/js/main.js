@@ -56,6 +56,12 @@
       top: elementPos - offset,
       behavior: 'smooth'
     })
+
+    console.log('element', el)
+    console.log('el Pos', elementPos)
+    console.log('header', header)
+    console.log('offset',offset)
+    console.log('top', elementPos - offset)
   }
 
   /**
@@ -132,15 +138,17 @@
 
   /**
    * Scroll with ofset on page load with hash links in the url
-  */
+  
   window.addEventListener('load', () => {
     if (window.location.hash) {
+      console.log(window.location.hash)
       if (select(window.location.hash)) {
+        console.log("scrolling...")
         scrollto(window.location.hash)
       }
     }
   });
- 
+ */
 
   /**
    * Initiate portfolio lightbox 
