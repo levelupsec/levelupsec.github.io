@@ -44,7 +44,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
   <script>
     window.addEventListener("load", function(){
-    console.log("loading")
     window.cookieconsent.initialise({
       "palette": {
         "popup": {
@@ -88,7 +87,7 @@
           </li>          
           <li><a class="scrollto" href="#about">About</a></li>          
           <li><a class="scrollto" href="#services">Services</a></li>
-          <li><a class="scrollto" href="#testimonials">Reviews</a></li>
+          <li><a class="scrollto" href="#reviews">Reviews</a></li>
           <li><a class="scrollto" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -109,8 +108,7 @@
   <main id="main">
 
     <!-- ======= About Section ======= -->
-    <a id="about" class="anchor"></a>
-    <section class="about scrollto">
+    <section id="about" class="about scrollto">
       <div class="container">
       <div class="row justify-content-end">
         <div class="col-lg-11">
@@ -236,11 +234,10 @@
               <p class="text-start">Learn industry tools and techniques to analyze binaries.</p>
             </div>
           </div>           
-        </section><!-- End Cta Section -->
+    </section><!-- End Cta Section -->
 
     <!-- ======= Services Section ======= -->
-    <a id="services" class="anchor"></a>
-    <section class="services section-bg">
+    <section id="services" class="services section-bg">
       <div class="container">
 
         <div class="section-title" data-aos="fade-up">
@@ -288,12 +285,11 @@
     </section><!-- End Services Section -->
 
     <!-- ======= Testimonials Section ======= -->
-    <a id="testimonials" class="anchor"></a>
-    <section id="testimonials" class="testimonials">
+    <section id="reviews" class="testimonials">
       <div class="container">
 
         <div class="section-title" data-aos="fade-up">
-          <h2>Hear from Partners & Students</h2>
+          <h2 id="reviews">Hear from Partners & Students</h2>
           <p>Don't take our word for it. Take theirs</p>
         </div>
 
@@ -568,8 +564,7 @@
 
 
     <!-- ======= Contact Section ======= -->
-    <a id="contact" class="anchor"></a>
-    <section class="contact section-bg">
+    <section id="contact" class="contact section-bg">
       <div class="container">
 
         <div class="section-title" data-aos="fade-up">
