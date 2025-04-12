@@ -4,7 +4,7 @@ student_survey.onComplete.add((sender, options) => {
 
     $.ajax({
         type:"POST",
-        url: "https://script.google.com/macros/s/AKfycbxMm-wNQWnCRSWimtatTMk-wLDK-3B71k1D7J3xNxERjWYZWfKDb5vfT_uw0YWGxkOa/exec",
+        url: "https://script.google.com/macros/s/AKfycbxquEKimp4GtTvlGLvX6gZmlp3OEs6GA2BZT-QFP3ClTW0VgPiPZCC63piSUPO8s_Xt/exec",
         data: JSON.stringify(sender.data, null, 3),
         success: function(data)
         {
