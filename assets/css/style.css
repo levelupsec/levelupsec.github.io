@@ -790,8 +790,9 @@ section {
 }
 
 .cta .cta-btn:hover {
-  background: #aacd6b;
-  border-color: #aacd6b;
+  background: #fff;
+  border-color: #fff;
+  color: #009cea;
 }
 
 .cta svg {
