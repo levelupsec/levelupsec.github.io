@@ -12,12 +12,12 @@ const tutor_json = {
               </p>\n\n\
               <p><b>New Clients</b></p>\
               <p>Free 30 minute consult to discuss what you're looking for and how we can help.</p>\n\
-              <br>\n\
               <p>\
               <b>Complimentary first 30 minutes.</b></p>\n\
               <p>Included with your first purchase. If you decide you don't want to continue, we'll provide a full refund.</p>\n\
-              <br>\n<p>Single class: <b>$150</b></p>\n\
-              <p>Three class pack: <b>$425 (5% discount)</b></p>\n\
+              <p><b>Packages</b></p>\
+              <p>Single class: <b>$150</b></p>\
+              <p>Three class pack: <b>$425 (5% discount)</b></p>\
               <p>Five class pack: <b>$675 (10% discount)</b></p>\
               <a href='refund-policy.html'>Refund Policy</a>\
             </p>"
