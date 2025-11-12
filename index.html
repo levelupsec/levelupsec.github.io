@@ -243,9 +243,20 @@
         <div class="section-title" data-aos="fade-up">
           <h2>Services</h2>
           <!--<p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>-->
-        </div>
+        </div>       
 
         <div class="row justify-content-center align-items-center">
+          <div class="justify-content-center col-md-6 col-md-offset-4 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box icon-box-blue">
+              <div class="icon"><i class="bi bi-easel2"></i></div>
+              <br>
+              <h4 class="title"><a href="">Tutoring</a></h4>
+              <p class="description">Looking for Help?</p>
+              <br>
+              <div class="text-center"><button class="btn-get-started" type="submit" data-bs-toggle="modal" data-bs-target="#tutorModal">Schedule Now</button></div>
+            </div>
+          </div> 
+
           <div class="justify-content-center col-md-6 col-md-offset-4 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box icon-box-blue">
               <div class="icon"><i class="bi bi-book-half"></i></div>
@@ -621,6 +632,20 @@
             </p>            
           </div>
 
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h3>Resources</h3>
+            <h4></h4>
+            <p>
+
+              <p><a href="classroom/dashboard.html">Classroom</a></p>
+              <p><a class="scrollto" href="#about">About</a></p>
+              <p><a class="scrollto" href="#services">Services</a></p>
+              <p><a class="scrollto" href="#contact">Contact</a></p>
+              <p><a class="scrollto" href="#reviews">Reviews</a></p>
+              <p><a href="refund-policy.html">Refund Policy</a></p>
+            </p>            
+          </div>
+
         </div>
       </div>
     </div>
@@ -633,6 +658,24 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Modals -->
+  <!-- Tutor Application-->
+  <div class="modal fade" id="tutorModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Apply Now!</h5>
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div id="tutor_form" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Student Application-->
   <div class="modal fade" id="studentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -704,11 +747,13 @@
   <script src="https://unpkg.com/jquery/dist/jquery.min.js"></script>
   <script src="https://unpkg.com/survey-jquery@1.9.126/survey.jquery.min.js"></script>
   <script src="https://unpkg.com/survey-jquery@1.9.126/themes/index.min.js"></script>
-  
+ 
+  <script src="assets/js/tutor_json.js"></script>
   <script src="assets/js/student_json.js"></script>
   <script src="assets/js/skillbridge_json.js"></script>
   <script src="assets/js/company_json.js"></script>
   <script src="assets/js/theme.js"></script>
+  <script src="assets/js/tutor_form.js"></script>
   <script src="assets/js/student_form.js"></script>
   <script src="assets/js/skillbridge_form.js"></script>
   <script src="assets/js/company_form.js"></script>  
