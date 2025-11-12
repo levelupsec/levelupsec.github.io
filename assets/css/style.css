@@ -8,6 +8,10 @@
 
 #more {display: none;}
 
+.light-background {
+  --background-color: #f1faff;
+  --surface-color: #ffffff;
+}
 
 /*--------------------------------------------------------------
 # General
@@ -379,6 +383,43 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# Global Page Titles & Breadcrumbs
+--------------------------------------------------------------*/
+.page-title {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 20px 0;
+  position: relative;
+}
+
+.page-title h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.page-title .breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0 0 10px 0;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.page-title .breadcrumbs ol li+li {
+  padding-left: 10px;
+}
+
+.page-title .breadcrumbs ol li+li::before {
+  content: "/";
+  display: inline-block;
+  padding-right: 10px;
+  color: color-mix(in srgb, var(--default-color), transparent 70%);
+}
+
+/*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
@@ -415,7 +456,7 @@ h6 {
 }
 
 #hero h1 {
-  margin: -20% 0 10px 0;
+  /* margin: -20% 0 10px 0; */
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
@@ -441,6 +482,8 @@ h6 {
   border: 2px solid #009cea;
   text-transform: uppercase;
   color: #fff;
+  position: absolute;
+  bottom: 10%;
 }
 
 #hero .btn-get-started:hover {
@@ -554,6 +597,13 @@ section {
   padding-right: 10px;
   color: #565e49;
   content: "/";
+}
+
+/*--------------------------------------------------------------
+# Refund
+--------------------------------------------------------------*/
+#refund {
+  padding: 10px 0 0 0;
 }
 
 /*--------------------------------------------------------------
